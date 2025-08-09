@@ -1,0 +1,9 @@
+{
+  "name": "anime-tube-worker",
+  "version": "0.1.0",
+  "main": "src/transcodeWorker.js",
+  "dependencies": {
+    "bullmq": "^2.9.7",
+    "ioredis": "^5.3.2"
+  }
+}

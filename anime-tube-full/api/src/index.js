@@ -1,0 +1,13 @@
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const uploadRoutes = require('./routes/upload');
+const authRoutes = require('./routes_auth');
+const adminRoutes = require('./routes_admin');
+const app = express();
+app.use(express.json());
+app.use(cookieParser());
+app.use('/api/upload', uploadRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/admin', adminRoutes);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, ()=> console.log(`API running on ${PORT}`));
